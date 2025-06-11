@@ -27,7 +27,7 @@ def global_distribution(self):
     st.markdown("### :round_pushpin: Global earthquake distribution.")
     st.text("Place your cursor to get details of the magnitude for repsective points")
     col=st.color_picker("Select a color for plot")
-    fig=px.scatter_mapbox(df, lat="latitude", lon="longitude", hover_name="mag", zoom=1)
+    fig=px.scatter_mapbox(df, lat="latitude", lon="longitude", hover_data=["time","mag"], zoom=1)
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_traces(marker=dict(color=col))
     st.plotly_chart(fig, use_container_width=True)
