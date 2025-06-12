@@ -32,7 +32,6 @@ def global_distribution(self):
     fig.update_traces(marker=dict(color=col))
     st.plotly_chart(fig, use_container_width=True)
 
-st.set_page_config(layout="wide")
 st.title(":point_right: Global earthquake EDA 1906-2023")
 st.markdown('<style>div.block-container{margin-top:0; padding-top:2rem;}</style>', unsafe_allow_html=True)
 
